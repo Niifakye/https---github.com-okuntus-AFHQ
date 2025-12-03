@@ -36,16 +36,16 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-black/55"></div>
 
         {/* Decorative soft linears */}
-        <div className="absolute inset-0 pointer-events-none">
+        {/* <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-0 right-0 w-72 h-72 bg-blue-500/8 rounded-full blur-3xl"></div>
           <div className="absolute bottom-0 left-0 w-72 h-72 bg-cyan-500/8 rounded-full blur-3xl"></div>
-        </div>
+        </div> */}
 
         {/* Content centered */}
         <div className="relative z-10 w-full">
           <div className="max-w-4xl mx-auto px-6 text-center py-28">
             <span className="inline-block bg-linear-to-r from-blue-400 to-cyan-400 text-slate-950 px-4 py-1 rounded-full text-sm font-semibold mb-6">
-              PROTECTING THE SKIES
+              PROTECTING THE AIRSPACE
             </span>
 
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold mt-6 leading-tight">
@@ -141,8 +141,8 @@ export default function HomePage() {
                 🛩️
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-bold mb-2">F-35 Lightning</h3>
-                <p className="text-sm text-slate-400 mb-4">5th Generation Multi-Role Fighter</p>
+                <h3 className="text-xl font-bold mb-2">K-8P</h3>
+                <p className="text-sm text-slate-400 mb-4"> Multi-Role Fighter-Trainer</p>
                 <div className="flex gap-2 flex-wrap">
                   <span className="text-xs bg-blue-500/20 text-blue-300 px-2 py-1 rounded">Max: 1190 mph</span>
                   <span className="text-xs bg-blue-500/20 text-blue-300 px-2 py-1 rounded">Range: 1300 mi</span>
@@ -156,7 +156,7 @@ export default function HomePage() {
                 ✈️
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-bold mb-2">C-130 Hercules</h3>
+                <h3 className="text-xl font-bold mb-2">Casa C-295m</h3>
                 <p className="text-sm text-slate-400 mb-4">Tactical Transport Aircraft</p>
                 <div className="flex gap-2 flex-wrap">
                   <span className="text-xs bg-blue-500/20 text-blue-300 px-2 py-1 rounded">Max: 540 mph</span>
@@ -171,11 +171,11 @@ export default function HomePage() {
                 🚁
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-bold mb-2">UH-60 Blackhawk</h3>
+                <h3 className="text-xl font-bold mb-2">MI-171SH</h3>
                 <p className="text-sm text-slate-400 mb-4">Medium-Lift Utility Helicopter</p>
                 <div className="flex gap-2 flex-wrap">
-                  <span className="text-xs bg-blue-500/20 text-blue-300 px-2 py-1 rounded">Max: 183 mph</span>
-                  <span className="text-xs bg-blue-500/20 text-blue-300 px-2 py-1 rounded">Range: 1260 mi</span>
+                  <span className="text-xs bg-blue-500/20 text-blue-300 px-2 py-1 rounded">Max: 483 mph</span>
+                  <span className="text-xs bg-blue-500/20 text-blue-300 px-2 py-1 rounded">Range: 8260 mi</span>
                 </div>
               </div>
             </div>
@@ -183,11 +183,11 @@ export default function HomePage() {
             {/* Aircraft Card 4 */}
             <div className="bg-linear-to-br from-blue-900/30 to-slate-900 border border-blue-500/30 rounded-lg overflow-hidden hover:border-blue-400 transition-all group">
               <div className="bg-linear-to-b from-blue-900/40 to-transparent h-48 flex items-center justify-center text-6xl group-hover:scale-110 transition-transform">
-                🛸
+                🚁
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-bold mb-2">RQ-4 Global Hawk</h3>
-                <p className="text-sm text-slate-400 mb-4">High-Altitude UAV</p>
+                <h3 className="text-xl font-bold mb-2">Z-9EH</h3>
+                <p className="text-sm text-slate-400 mb-4">Light Weight Helicopter</p>
                 <div className="flex gap-2 flex-wrap">
                   <span className="text-xs bg-blue-500/20 text-blue-300 px-2 py-1 rounded">Max: 460 mph</span>
                   <span className="text-xs bg-blue-500/20 text-blue-300 px-2 py-1 rounded">Range: 8000 mi</span>
@@ -236,26 +236,25 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-4 gap-8 text-center">
             <div className="p-8 bg-linear-to-br from-blue-900/30 to-slate-900 border border-blue-500/30 rounded-lg">
-              <div className="text-5xl font-bold text-blue-400 mb-2">850+</div>
+              <div className="text-5xl font-bold text-blue-400 mb-2">20+</div>
               <p className="text-slate-400">Active Aircraft</p>
             </div>
             <div className="p-8 bg-linear-to-br from-blue-900/30 to-slate-900 border border-blue-500/30 rounded-lg">
-              <div className="text-5xl font-bold text-cyan-400 mb-2">330K+</div>
+              <div className="text-5xl font-bold text-cyan-400 mb-2">5000K+</div>
               <p className="text-slate-400">Active Personnel</p>
             </div>
             <div className="p-8 bg-linear-to-br from-blue-900/30 to-slate-900 border border-blue-500/30 rounded-lg">
-              <div className="text-5xl font-bold text-blue-400 mb-2">75+</div>
+              <div className="text-5xl font-bold text-blue-400 mb-2">7+</div>
               <p className="text-slate-400">Operating Bases</p>
             </div>
             <div className="p-8 bg-linear-to-br from-blue-900/30 to-slate-900 border border-blue-500/30 rounded-lg">
               <div className="text-5xl font-bold text-cyan-400 mb-2">24/7</div>
-              <p className="text-slate-400">Global Coverage</p>
+              <p className="text-slate-400">Active Duty</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Contact has been moved to `src/compnents/Contact.jsx` so it's managed separately. */}
 
       {/* Footer */}
       <footer className="bg-slate-950 border-t border-slate-800 py-12 px-4 sm:px-6 lg:px-8">
@@ -312,8 +311,8 @@ export default function HomePage() {
           </div>
           
           <div className="border-t border-slate-800 pt-8 text-center text-slate-500 text-sm">
-            <p>&copy; 2024 Global Air Force Command. All rights reserved.</p>
-            <p className="mt-2">Protecting the skies. Securing the future.</p>
+            <p>&copy; 1957 Ghana Air Force. All rights reserved.</p>
+            <p className="mt-2">Protecting the airspace. Securing the future.</p>
           </div>
         </div>
       </footer>

@@ -71,11 +71,11 @@ export default function AboutUs() {
                 <p className="text-slate-400">Active Personnel</p>
               </div>
               <div className="bg-linear-to-br from-blue-900/30 to-slate-900 border border-blue-500/30 rounded-lg p-6">
-                <div className="text-4xl font-bold text-blue-400 mb-2">850+</div>
+                <div className="text-4xl font-bold text-blue-400 mb-2">50+</div>
                 <p className="text-slate-400">Aircraft Fleet</p>
               </div>
               <div className="bg-linear-to-br from-blue-900/30 to-slate-900 border border-blue-500/30 rounded-lg p-6">
-                <div className="text-4xl font-bold text-cyan-400 mb-2">75+</div>
+                <div className="text-4xl font-bold text-cyan-400 mb-2">10+</div>
                 <p className="text-slate-400">Operating Bases</p>
               </div>
             </div>

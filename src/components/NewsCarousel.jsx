@@ -1,15 +1,17 @@
 import React, { useState, useEffect } from 'react'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
+import NewsImg1 from '../assets/VBTeam.jpg'
 
 const newsItems = [
   {
     id: 1,
-    title: 'New F-35 Squadron Operational',
-    date: 'November 24, 2024',
-    description: 'The latest squadron of F-35 Lightning II fighters has achieved full operational capability, enhancing our air superiority.',
-    image: '✈️',
+    title: 'No4 Squadron K-8P Training',
+    date: 'November 24, 2025',
+    description: 'The No4 squadron of K-8P fighters has achieved full operational capability, enhancing our air superiority.',
+    image: {NewsImg1},
     category: 'Operations'
   },
+  // ✈️
   {
     id: 2,
     title: 'Advanced Training Program Launches',
@@ -152,23 +154,6 @@ export default function NewsCarousel() {
             />
           ))}
         </div>
-
-        {/* News Grid Below Carousel */}
-        {/* <div className="mt-12 grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-          {newsItems.slice(0, 4).map((news) => (
-            <div
-              key={news.id}
-              className="bg-slate-800/50 border border-slate-700 rounded-lg p-4 hover:border-blue-500 transition-all cursor-pointer hover:shadow-lg hover:shadow-blue-500/20"
-            >
-              <div className="text-5xl mb-3">{news.image}</div>
-              <span className="inline-block bg-blue-500/20 text-blue-300 px-3 py-1 rounded text-xs font-semibold mb-2">
-                {news.category}
-              </span>
-              <h4 className="font-bold text-sm mb-2 line-clamp-2">{news.title}</h4>
-              <p className="text-xs text-slate-400">{news.date}</p>
-            </div>
-          ))}
-        </div> */}
       </div>
     </section>
   )

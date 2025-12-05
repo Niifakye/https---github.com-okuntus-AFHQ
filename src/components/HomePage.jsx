@@ -2,7 +2,7 @@ import { ChevronDown } from 'lucide-react'
 import { useEffect } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
 import Navbar from './Navbar'
-import NewsCarousel from '../NewsCarousel'
+import NewsCarousel from './NewsCarousel'
 import heroImg from '../assets/falcon.jpg'
 
 export default function HomePage() {
@@ -60,11 +60,11 @@ export default function HomePage() {
 
             <div className="mt-8 flex justify-center gap-4">
               <button className="bg-linear-to-r from-blue-500 to-blue-700 px-6 py-3 rounded-lg font-semibold text-base hover:scale-105 transition-transform">
-                Learn More
+                About Us
               </button>
-              <button className="border-2 border-blue-300 text-blue-200 px-6 py-3 rounded-lg font-semibold hover:bg-white/5 transition-colors">
-                Watch Demo
-              </button>
+              {/* <button className="border-2 border-blue-300 text-blue-200 px-6 py-3 rounded-lg font-semibold hover:bg-white/5 transition-colors">
+                Watch 
+              </button> */}
             </div>
 
             <div className="mt-12 flex justify-center">

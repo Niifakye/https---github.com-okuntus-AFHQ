@@ -41,6 +41,7 @@ export default function Navbar() {
             <button onClick={() => handleNav('aircraft')} className="hover:text-blue-400 transition-colors">Aircraft</button>
             <button onClick={() => handleNav('capabilities')} className="hover:text-blue-400 transition-colors">Capabilities</button>
             <Link to="/contact" className="hover:text-blue-400 transition-colors">Contact</Link>
+            <Link to='/aboutus' className='hover:text-blue-400 transition-colors'>About</Link>
             <button className="bg-linear-to-r from-blue-500 to-blue-700 px-6 py-2 rounded-lg font-semibold hover:shadow-lg hover:shadow-blue-500/50 transition-all">
               Enlist
             </button>

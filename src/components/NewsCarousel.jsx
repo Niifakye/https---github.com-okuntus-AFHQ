@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 import NewsImg1 from '../assets/VBTeam.jpg'
+import NewsImg2 from '../assets/k8.jpg'
+import NewsImg3 from '../assets/falcon.jpg'
+import NewsImg4 from '../assets/LE-visit.jpg'
+import NewsImg5 from '../assets/MI.jpg'
 
 const newsItems = [
   {
@@ -8,16 +12,15 @@ const newsItems = [
     title: 'No4 Squadron K-8P Training',
     date: 'November 24, 2025',
     description: 'The No4 squadron of K-8P fighters has achieved full operational capability, enhancing our air superiority.',
-    image: {NewsImg1},
+    bgImage: NewsImg1,
     category: 'Operations'
   },
-  // ✈️
   {
     id: 2,
     title: 'Advanced Training Program Launches',
     date: 'November 22, 2024',
     description: 'State-of-the-art pilot training program begins with the latest simulation technology and combat scenarios.',
-    image: '🎖️',
+    bgImage: NewsImg2,
     category: 'Training'
   },
   {
@@ -25,7 +28,7 @@ const newsItems = [
     title: 'Global Surveillance Network Expanded',
     date: 'November 20, 2024',
     description: 'New satellite reconnaissance capabilities now provide real-time monitoring across all strategic regions.',
-    image: '🛰️',
+    bgImage: NewsImg3,
     category: 'Technology'
   },
   {
@@ -33,7 +36,7 @@ const newsItems = [
     title: 'Joint Military Exercise Successful',
     date: 'November 18, 2024',
     description: 'Multi-national air defense exercise demonstrates enhanced coordination and rapid response capabilities.',
-    image: '🎯',
+    bgImage: NewsImg4,
     category: 'Exercises'
   },
   {
@@ -41,7 +44,7 @@ const newsItems = [
     title: 'Cyber Defense Systems Upgraded',
     date: 'November 16, 2024',
     description: 'New cybersecurity infrastructure protects against emerging threats and ensures mission continuity.',
-    image: '🔐',
+    bgImage: NewsImg5,
     category: 'Security'
   }
 ]
@@ -78,8 +81,14 @@ export default function NewsCarousel() {
   const currentNews = newsItems[currentIndex]
 
   return (
-    <section id="news" className="py-20 px-4 sm:px-6 lg:px-8 bg-linear-to-b from-slate-900 to-slate-950">
-      <div className="max-w-6xl mx-auto">
+    <section
+      id="news"
+      className="relative min-h-screen bg-cover bg-center bg-no-repeat flex items-center"
+      style={{ backgroundImage: `url(${currentNews.bgImage})` }}
+    >
+      <div className="absolute inset-0 bg-black/60 pointer-events-none" />
+      
+      <div className="max-w-6xl mx-auto relative z-10 px-4 sm:px-6 lg:px-8 py-20">
         <h2 className="text-5xl font-bold text-center mb-4">
           <span className="bg-linear-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
             Latest News
@@ -91,19 +100,14 @@ export default function NewsCarousel() {
 
         {/* Main Carousel */}
         <div
-          className="group relative rounded-xl overflow-hidden bg-linear-to-br from-slate-800 to-slate-900 border border-blue-500/30 hover:border-blue-400 transition-all"
+          className="group relative overflow-hidden hover:border-blue-400 transition-all w-full"
           onMouseEnter={() => setAutoPlay(false)}
           onMouseLeave={() => setAutoPlay(true)}
         >
-          {/* Background Image/Icon */}
-          <div className="absolute inset-0 flex items-center justify-center opacity-10 text-9xl">
-            {currentNews.image}
-          </div>
-
           {/* Content */}
-          <div className="relative z-10 p-8 sm:p-12 min-h-80 flex flex-col justify-between">
+          <div className="relative z-10 sm:p-12 flex flex-col justify-between w-full">
             <div>
-              <div className="flex items-center gap-4 mb-4">
+              <div className="flex items-left gap-4 mb-4">
                 <span className="inline-block bg-blue-500/20 text-blue-300 px-4 py-1 rounded-full text-sm font-semibold">
                   {currentNews.category}
                 </span>
@@ -127,14 +131,14 @@ export default function NewsCarousel() {
           {/* Navigation Buttons */}
           <button
             onClick={goToPrevious}
-            className="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-blue-500/20 hover:bg-blue-500/40 text-white p-2 rounded-lg transition-all opacity-0 group-hover:opacity-100 duration-300"
+            className="absolute left-0 top-1/2 -translate-y-1/2 z-20 bg-blue-500/20 hover:bg-blue-500/40 text-white p-2 rounded-lg transition-all opacity-0 group-hover:opacity-100 duration-300"
           >
             <ChevronLeft size={28} />
           </button>
 
           <button
             onClick={goToNext}
-            className="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-blue-500/20 hover:bg-blue-500/40 text-white p-2 rounded-lg transition-all opacity-0 group-hover:opacity-100 duration-300"
+            className="absolute right-0 top-1/2 -translate-y-1/2 z-20 bg-blue-500/20 hover:bg-blue-500/40 text-white p-2 rounded-lg transition-all opacity-0 group-hover:opacity-100 duration-300"
           >
             <ChevronRight size={28} />
           </button>

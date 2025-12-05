@@ -76,8 +76,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* news section */}
-      <NewsCarousel/>
 
       {/* Mission Section */}
       <section id="mission" className="py-20 px-4 sm:px-6 lg:px-8 bg-linear-to-b from-slate-950 to-slate-900">
@@ -121,6 +119,11 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+
+      {/* news section */}
+      <NewsCarousel/>
+      
 
       {/* Aircraft Section */}
       <section id="aircraft" className="py-20 px-4 sm:px-6 lg:px-8">
